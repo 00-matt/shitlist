@@ -1,0 +1,21 @@
+---
+name: Build
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - bad-sites
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          ./create-rules.bash bad-sites >shitlist.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add shitlist.txt
+          git commit -m'Update shitlist.txt' || exit 0
+          git push
