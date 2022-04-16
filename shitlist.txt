@@ -16,5 +16,7 @@ duckduckgo.com##[data-domain*="ostack.cn"]
 google.*##.g:has(a[href*="ostack.cn"])
 duckduckgo.com##[data-domain*="python.engineering"]
 google.*##.g:has(a[href*="python.engineering"])
+duckduckgo.com##[data-domain*="serveanswer.com"]
+google.*##.g:has(a[href*="serveanswer.com"])
 duckduckgo.com##[data-domain*="studytonight.com"]
 google.*##.g:has(a[href*="studytonight.com"])
